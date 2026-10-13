@@ -1,0 +1,113 @@
+{
+	"format_version": "1.9.0",
+	"credit": "Made with Blockbench",
+	"render_type": "minecraft:cutout",
+	"textures": {
+		"planks": "block/planks",
+		"log_side": "block/log_side",
+		"log_top": "block/log_top",
+		"paper": "block/paper",
+		"stone": "block/stone",
+		"particle": "block/planks"
+	},
+	"elements": [
+		{
+			"name": "post",
+			"from": [7, -0.1, 11],
+			"to": [9, 14.9, 13],
+			"rotation": {"angle": 0, "axis": "y", "origin": [8, 7.4, 12]},
+			"faces": {
+				"north": {"uv": [0, 0, 2, 15], "texture": "#log_side", "tintindex": 0},
+				"east": {"uv": [6, 1, 8, 16], "texture": "#log_side", "tintindex": 0},
+				"south": {"uv": [12, 1, 14, 16], "texture": "#log_side", "tintindex": 0},
+				"west": {"uv": [10, 1, 12, 16], "texture": "#log_side"},
+				"up": {"uv": [10, 12, 8, 10], "texture": "#log_top"},
+				"down": {"uv": [12, 10, 10, 12], "texture": "#log_top"}
+			}
+		},
+		{
+			"name": "face",
+			"from": [1, 7, 10],
+			"to": [15, 14, 11],
+			"rotation": {"angle": 0, "axis": "y", "origin": [7, 9, 9]},
+			"faces": {
+				"north": {"uv": [0, 0, 14, 7], "texture": "#planks"},
+				"east": {"uv": [9, 9, 10, 16], "texture": "#planks"},
+				"south": {"uv": [2, 9, 16, 16], "texture": "#planks"},
+				"west": {"uv": [15, 9, 16, 16], "texture": "#planks"},
+				"up": {"uv": [16, 16, 2, 15], "texture": "#planks"},
+				"down": {"uv": [16, 15, 2, 16], "texture": "#planks"}
+			}
+		},
+		{
+			"name": "paper",
+			"from": [2, 8, 9.95],
+			"to": [14, 13, 10],
+			"rotation": {"angle": 0, "axis": "y", "origin": [8, 10, 8.95]},
+			"faces": {
+				"north": {"uv": [0, 0, 12, 5], "texture": "#paper"},
+				"east": {"uv": [0, 11, 1, 16], "texture": "#paper"},
+				"south": {"uv": [0, 5, 12, 10], "texture": "#paper"},
+				"west": {"uv": [1, 11, 2, 16], "texture": "#paper"},
+				"up": {"uv": [0, 10, 12, 11], "texture": "#paper"},
+				"down": {"uv": [0, 10, 12, 11], "texture": "#paper"}
+			}
+		},
+		{
+			"name": "nail1",
+			"from": [2.3, 12, 9.5],
+			"to": [3.3, 13, 10],
+			"rotation": {"angle": 22.5, "axis": "z", "origin": [2.3, 12, 9.5]},
+			"faces": {
+				"north": {"uv": [12.7, 3, 13.7, 4], "texture": "#stone"},
+				"east": {"uv": [10, 3, 10.5, 4], "texture": "#stone"},
+				"south": {"uv": [2.3, 3, 3.3, 4], "texture": "#stone"},
+				"west": {"uv": [5.5, 3, 6, 4], "texture": "#stone"},
+				"up": {"uv": [2.3, 5.5, 3.3, 6], "texture": "#stone"},
+				"down": {"uv": [2.3, 10, 3.3, 10.5], "texture": "#stone"}
+			}
+		},
+		{
+			"name": "nail2",
+			"from": [13, 12.6, 9.5],
+			"to": [14, 13.6, 10],
+			"rotation": {"angle": -22.5, "axis": "z", "origin": [13, 12.6, 9.5]},
+			"faces": {
+				"north": {"uv": [2, 2.4, 3, 3.4], "texture": "#stone"},
+				"east": {"uv": [10, 2.4, 10.5, 3.4], "texture": "#stone"},
+				"south": {"uv": [13, 2.4, 14, 3.4], "texture": "#stone"},
+				"west": {"uv": [5.5, 2.4, 6, 3.4], "texture": "#stone"},
+				"up": {"uv": [13, 5.5, 14, 6], "texture": "#stone"},
+				"down": {"uv": [13, 10, 14, 10.5], "texture": "#stone"}
+			}
+		}
+	],
+	"display": {
+		"thirdperson_righthand": {
+			"rotation": [0, -180, 0],
+			"translation": [0, 6.75, 5.25]
+		},
+		"thirdperson_lefthand": {
+			"rotation": [0, -180, 0],
+			"translation": [0, 6.75, 5.25]
+		},
+		"firstperson_righthand": {
+			"rotation": [-41, -180, 1],
+			"translation": [1.5, -1, 1.75]
+		},
+		"firstperson_lefthand": {
+			"rotation": [-41, -180, 1],
+			"translation": [1.5, -1, 1.75]
+		},
+		"gui": {
+			"rotation": [0, 158, 0],
+			"translation": [-0.75, 0.75, 0]
+		},
+		"fixed": {
+			"translation": [0, 0, -2.5]
+		},
+		"on_shelf": {
+			"rotation": [0, 180, 0]
+		}
+	}
+}

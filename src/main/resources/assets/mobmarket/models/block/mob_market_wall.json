@@ -1,0 +1,99 @@
+{
+	"format_version": "1.9.0",
+	"credit": "Made with Blockbench",
+	"render_type": "minecraft:cutout",
+	"textures": {
+		"planks": "mobmarket:block/planks",
+		"log_side": "mobmarket:block/log_side",
+		"log_top": "mobmarket:block/log_top",
+		"paper": "mobmarket:block/paper",
+		"stone": "mobmarket:block/stone",
+		"particle": "mobmarket:block/planks"
+	},
+	"elements": [
+		{
+			"name": "face",
+			"from": [1, 7, 14],
+			"to": [15, 14, 15],
+			"rotation": {"angle": 0, "axis": "y", "origin": [7, 9, 13]},
+			"faces": {
+				"north": {"uv": [0.0, 0.0, 14.0, 7.0], "texture": "#planks"},
+				"east": {"uv": [0.0, 5.0, 1.0, 12.0], "texture": "#planks"},
+				"south": {"uv": [0.0, 7.0, 14.0, 14.0], "texture": "#planks"},
+				"west": {"uv": [1.0, 5.0, 2.0, 12.0], "texture": "#planks"},
+				"up": {"uv": [2.0, 5.0, 16.0, 6.0], "texture": "#planks"},
+				"down": {"uv": [2.0, 6.0, 16.0, 7.0], "texture": "#planks"}
+			}
+		},
+		{
+			"name": "paper",
+			"from": [2, 8, 13.95],
+			"to": [14, 13, 14],
+			"rotation": {"angle": 0, "axis": "y", "origin": [8, 10, 12.95]},
+			"faces": {
+				"north": {"uv": [0.0, 0.0, 12.0, 5.0], "texture": "#paper"},
+				"east": {"uv": [0.0, 11.0, 1.0, 16.0], "texture": "#paper"},
+				"south": {"uv": [0.0, 5.0, 12.0, 10.0], "texture": "#paper"},
+				"west": {"uv": [1.0, 11.0, 2.0, 16.0], "texture": "#paper"},
+				"up": {"uv": [0.0, 10.0, 12.0, 11.0], "texture": "#paper"},
+				"down": {"uv": [0.0, 10.0, 12.0, 11.0], "texture": "#paper"}
+			}
+		},
+		{
+			"name": "nail1",
+			"from": [2.3, 12, 13.5],
+			"to": [3.3, 13, 14],
+			"rotation": {"angle": 22.5, "axis": "z", "origin": [2.3, 12, 13.5]},
+			"faces": {
+				"north": {"uv": [12.7, 3.0, 13.7, 4.0], "texture": "#stone"},
+				"east": {"uv": [10.0, 3.0, 10.5, 4.0], "texture": "#stone"},
+				"south": {"uv": [2.3, 3.0, 3.3, 4.0], "texture": "#stone"},
+				"west": {"uv": [5.5, 3.0, 6.0, 4.0], "texture": "#stone"},
+				"up": {"uv": [2.3, 5.5, 3.3, 6.0], "texture": "#stone"},
+				"down": {"uv": [2.3, 10.0, 3.3, 10.5], "texture": "#stone"}
+			}
+		},
+		{
+			"name": "nail2",
+			"from": [13, 12.6, 13.5],
+			"to": [14, 13.6, 14],
+			"rotation": {"angle": -22.5, "axis": "z", "origin": [13, 12.6, 13.5]},
+			"faces": {
+				"north": {"uv": [2.0, 2.4, 3.0, 3.4], "texture": "#stone"},
+				"east": {"uv": [10.0, 2.4, 10.5, 3.4], "texture": "#stone"},
+				"south": {"uv": [13.0, 2.4, 14.0, 3.4], "texture": "#stone"},
+				"west": {"uv": [5.5, 2.4, 6.0, 3.4], "texture": "#stone"},
+				"up": {"uv": [13.0, 5.5, 14.0, 6.0], "texture": "#stone"},
+				"down": {"uv": [13.0, 10.0, 14.0, 10.5], "texture": "#stone"}
+			}
+		},
+		{
+			"name": "walllpost1",
+			"from": [2, 12, 15],
+			"to": [14, 13, 16],
+			"rotation": {"angle": 0, "axis": "y", "origin": [9, 11, 15]},
+			"faces": {
+				"north": {"uv": [0.0, 0.0, 12.0, 1.0], "texture": "#log_side"},
+				"east": {"uv": [0.0, 0.0, 1.0, 1.0], "texture": "#log_top"},
+				"south": {"uv": [0.0, 0.0, 12.0, 1.0], "texture": "#log_side"},
+				"west": {"uv": [0.0, 0.0, 1.0, 1.0], "texture": "#log_top"},
+				"up": {"uv": [0.0, 0.0, 12.0, 1.0], "texture": "#log_side"},
+				"down": {"uv": [0.0, 1.0, 12.0, 2.0], "texture": "#log_side"}
+			}
+		},
+		{
+			"name": "wallpost2",
+			"from": [2, 8, 15],
+			"to": [14, 9, 16],
+			"rotation": {"angle": 0, "axis": "y", "origin": [9, 7, 15]},
+			"faces": {
+				"north": {"uv": [0.0, 0.0, 12.0, 1.0], "texture": "#log_side"},
+				"east": {"uv": [0.0, 0.0, 1.0, 1.0], "texture": "#log_top"},
+				"south": {"uv": [0.0, 0.0, 12.0, 1.0], "texture": "#log_side"},
+				"west": {"uv": [0.0, 0.0, 1.0, 1.0], "texture": "#log_top"},
+				"up": {"uv": [0.0, 0.0, 12.0, 1.0], "texture": "#log_side"},
+				"down": {"uv": [0.0, 1.0, 12.0, 2.0], "texture": "#log_side"}
+			}
+		}
+	]
+}
