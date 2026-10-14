@@ -116,7 +116,7 @@ public class CurrencyManager {
                         if (json.has("allow_babies")) {
                             MOB_ALLOW_BABIES.put(type, json.get("allow_babies").getAsBoolean());
                         }
-                        
+
                         JsonElement attrArrayElem = null;
                         if (json.has("modifiers") && json.get("modifiers").isJsonArray()) {
                             attrArrayElem = json.get("modifiers");

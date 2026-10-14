@@ -1,0 +1,9 @@
+{
+  "singular_name": "gold coin",
+  "plural_name": "gold coins",
+  "items": {
+    "minecraft:gold_nugget": 1,
+    "minecraft:gold_ingot": 9,
+    "minecraft:gold_block": 81
+  }
+}

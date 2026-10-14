@@ -1,0 +1,38 @@
+{
+  "currency_id": "emerald",
+  "base_price": 24,
+  "scaling": {
+    "attributes": [
+      {
+        "key": "minecraft:generic.movement_speed",
+        "type": "linear",
+        "baseline": 0.225,
+        "multiplierPerUnit": 4.0,
+        "threshold": 0.0,
+        "bonusAmount": 0,
+        "minMultiplier": 0.5,
+        "maxMultiplier": 3.0
+      },
+      {
+        "key": "minecraft:horse.jump_strength",
+        "type": "linear",
+        "baseline": 0.7,
+        "multiplierPerUnit": 2.0,
+        "threshold": 0.0,
+        "bonusAmount": 0,
+        "minMultiplier": 0.5,
+        "maxMultiplier": 2.5
+      },
+      {
+        "key": "minecraft:generic.max_health",
+        "type": "linear",
+        "baseline": 20.0,
+        "multiplierPerUnit": 0.05,
+        "threshold": 0.0,
+        "bonusAmount": 0,
+        "minMultiplier": 0.8,
+        "maxMultiplier": 2.0
+      }
+    ]
+  }
+}
