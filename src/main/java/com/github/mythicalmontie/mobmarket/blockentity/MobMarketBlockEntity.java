@@ -150,8 +150,12 @@ public class MobMarketBlockEntity extends BlockEntity implements MenuProvider, N
         if (this.corner1 != null && this.corner2 != null) {
             return new AABB(this.corner1, this.corner2).expandTowards(1.0, 1.0, 1.0);
         }
-        int radius = 5;
-        return new AABB(this.worldPosition).inflate(radius);
+
+        Direction facing = this.getBlockState().hasProperty(net.minecraft.world.level.block.HorizontalDirectionalBlock.FACING)
+                ? this.getBlockState().getValue(net.minecraft.world.level.block.HorizontalDirectionalBlock.FACING)
+                : Direction.NORTH;
+        BlockPos frontPos = this.worldPosition.relative(facing);
+        return new AABB(frontPos).inflate(2.0, 2.0, 2.0).move(facing.getStepX() * 2.0, 0, facing.getStepZ() * 2.0);
     }
 
     public static String formatMobName(net.minecraft.world.entity.EntityType<?> entityType, int count) {
