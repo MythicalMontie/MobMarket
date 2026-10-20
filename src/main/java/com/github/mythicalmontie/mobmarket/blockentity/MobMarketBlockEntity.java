@@ -107,9 +107,6 @@ public class MobMarketBlockEntity extends BlockEntity implements MenuProvider, N
         if (TeamProtectionHelper.isFTBTeamsLoaded()) {setAccessMode((this.accessMode + 1) % 3);}
         else {setAccessMode(this.accessMode == 2 ? 0 : 2);}
     }
-    public void togglePublicStatus() {
-        this.togglePublicState();
-    }
     private void syncDataToClient() {
         if (this.level != null && !this.level.isClientSide) {
             this.level.sendBlockUpdated(this.worldPosition, getBlockState(), getBlockState(), 3);
@@ -344,8 +341,15 @@ public class MobMarketBlockEntity extends BlockEntity implements MenuProvider, N
 
                 if (currencyId != null && finalPrice > 0) {
                     accumulatedCurrency.put(currencyId, accumulatedCurrency.getOrDefault(currencyId, 0) + finalPrice);
+                    String mobNameKey;
+                    if (mob.hasCustomName() && mob.getCustomName() != null) {
+                        String customName = mob.getCustomName().getString();
+                        String baseEntityName = net.minecraft.network.chat.Component.translatable(type.getDescriptionId()).getString();
+                        mobNameKey = customName + " (" + baseEntityName + ")";
+                    } else {
+                        mobNameKey = type.getDescriptionId();
+                    }
 
-                    String mobNameKey = type.getDescriptionId();
                     SaleRecord existingRecord = null;
                     for (SaleRecord record : this.lastSalesRecord) {
                         if (record.getMobTranslationKey().equals(mobNameKey) && record.getCurrencyId().equals(currencyId)) {
@@ -472,8 +476,17 @@ public class MobMarketBlockEntity extends BlockEntity implements MenuProvider, N
         } else {
             for (SaleRecord record : this.lastSalesRecord) {
                 String lineKey = (record.getCount() == 1) ? "message.mobmarket.invoice_line_singular" : "message.mobmarket.invoice_line_plural";
-                String smartMobName = formatMobName(record.getEntityType(), record.getCount());
-                String countAndName = record.getCount() + " " + smartMobName;
+
+                String smartMobName;
+                String rawKey = record.getMobTranslationKey();
+
+                if (rawKey != null && !rawKey.startsWith("entity.")) {
+                    smartMobName = rawKey;
+                } else {
+                    smartMobName = formatMobName(record.getEntityType(), record.getCount());
+                }
+
+                String countAndName = record.getCount() + "x " + smartMobName;
                 String currencyName = CurrencyManager.getCurrencyName(record.getCurrencyId(), record.getTotalPrice());
 
                 player.sendSystemMessage(Component.translatable(
@@ -483,7 +496,6 @@ public class MobMarketBlockEntity extends BlockEntity implements MenuProvider, N
                         currencyName
                 ).withStyle(net.minecraft.ChatFormatting.YELLOW));
             }
-
             if (this.lastEligibleRemaining > 0) {
                 String remainKey = (this.lastEligibleRemaining == 1) ? "text.mobmarket.invoice_remaining_singular" : "text.mobmarket.invoice_remaining_plural";
                 String mobTermKey = (this.lastEligibleRemaining == 1) ? "text.mobmarket.mob_singular" : "text.mobmarket.mob_plural";
