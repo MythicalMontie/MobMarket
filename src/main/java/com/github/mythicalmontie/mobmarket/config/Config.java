@@ -20,7 +20,7 @@ public class Config
 
     public static final ForgeConfigSpec.IntValue MARKET_SALE_CHANCE = BUILDER
             .comment("The chance that a detected mob will successfully be sold each night. 100 = Always, 0 = Never.")
-            .defineInRange("saleChance",100,0,100);
+            .defineInRange("saleChance",100,1,100);
 
     public static final ForgeConfigSpec.BooleanValue SEND_SALE_MESSAGES = BUILDER
             .comment("If true, sends a chat message to the market post owner or whoever can access it (team/public) notifying them of how many mobs were sold and for how much")

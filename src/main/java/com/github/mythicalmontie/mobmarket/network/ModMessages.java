@@ -12,9 +12,7 @@ public class ModMessages {
     private static SimpleChannel INSTANCE;
     private static int packetId = 0;
 
-    private static int nextId() {
-        return packetId++;
-    }
+    private static int nextId() {return packetId++;}
 
     public static void register() {
 
@@ -44,7 +42,7 @@ public class ModMessages {
                 .add();
 
         INSTANCE.messageBuilder(SaveBoundsPacket.class, nextId(), net.minecraftforge.network.NetworkDirection.PLAY_TO_SERVER)
-                .decoder(SaveBoundsPacket::decode) // FIXED: Point to decode instead of the triple-BlockPos constructor reference hook!
+                .decoder(SaveBoundsPacket::decode)
                 .encoder(SaveBoundsPacket::encode)
                 .consumerMainThread(SaveBoundsPacket::handle)
                 .add();

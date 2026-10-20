@@ -104,11 +104,8 @@ public class MobMarketBlockEntity extends BlockEntity implements MenuProvider, N
         setAccessMode(isPublic ? 2 : 0);
     }
     public void togglePublicState() {
-        if (TeamProtectionHelper.isFTBTeamsLoaded()) {
-            setAccessMode((this.accessMode + 1) % 3);
-        } else {
-            setAccessMode(this.accessMode == 2 ? 0 : 2);
-        }
+        if (TeamProtectionHelper.isFTBTeamsLoaded()) {setAccessMode((this.accessMode + 1) % 3);}
+        else {setAccessMode(this.accessMode == 2 ? 0 : 2);}
     }
     public void togglePublicStatus() {
         this.togglePublicState();
@@ -190,7 +187,6 @@ public class MobMarketBlockEntity extends BlockEntity implements MenuProvider, N
     private final List<SaleRecord> lastSalesRecord = new ArrayList<>();
     private int lastEligibleRemaining = 0;
     private int lastIneligibleCount = 0;
-
     private int liveEligibleCount = 0;
     private int liveIneligibleCount = 0;
     private int liveBabyIneligibleCount = 0;

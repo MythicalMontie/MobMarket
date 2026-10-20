@@ -41,7 +41,6 @@ public class MobMarketBlock extends Block implements net.minecraft.world.level.b
     @Override
     public RenderShape getRenderShape(BlockState state) {return RenderShape.MODEL;}
 
-    // Set block highlight shapes by floor and wall
     private static final VoxelShape FLOOR_NORTH = Shapes.or(
             Block.box(7.0, 0.0, 3.0, 9.0, 15.0, 5.0),
             Block.box(1.0, 7.0, 5.0, 15.0, 14.0, 6.5)
@@ -62,7 +61,6 @@ public class MobMarketBlock extends Block implements net.minecraft.world.level.b
             Block.box(5.0, 7.0, 1.0, 6.5, 14.0, 15.0)
     );
 
-    //Wall start here
     private static final VoxelShape WALL_NORTH = Shapes.or(
             Block.box(1.0, 7.0, 1.0, 15.0, 14.0, 2.5),
             Block.box(2.0, 12.0, 0.0, 14.0, 13.0, 1.0),

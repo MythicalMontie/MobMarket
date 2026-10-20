@@ -11,10 +11,6 @@ import java.util.function.Supplier;
 public class SaleBreakdown {
     private final BlockPos pos;
 
-    public SaleBreakdown(BlockPos pos) {
-        this.pos = pos;
-    }
-
     public SaleBreakdown(FriendlyByteBuf buf) {
         this.pos = buf.readBlockPos();
     }
